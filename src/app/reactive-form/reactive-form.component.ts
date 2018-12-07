@@ -10,7 +10,7 @@ import {validate} from 'codelyzer/walkerFactory/walkerFn';
 export class ReactiveFormComponent implements OnInit {
 
   calcForm: FormGroup;
-  result = '足し算しましょう';
+  result = '足し算しましょう!';
   constructor() { }
 
   ngOnInit() {
@@ -39,5 +39,4 @@ export class ReactiveFormComponent implements OnInit {
   clearResult() {
     this.result = '';
   }
-
 }
