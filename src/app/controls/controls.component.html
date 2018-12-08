@@ -11,5 +11,11 @@
       {{select}}
     </span>
   </div>
+  <div>
+    <span *ngFor="let item of addsel">
+      <input type="checkbox" (change)="onCheckChanged(item, $event.target.checked)">
+      {{item}}
+    </span>
+  </div>
 </form>
 <p>フォーム入力値: {{coffeeForm.value | json }}</p>
