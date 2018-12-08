@@ -1,0 +1,15 @@
+<form [formGroup]="coffeeForm" novalidate>
+  <div>
+    <label>品名: <input formControlName="name"></label>
+  </div>
+  <div>
+    <label>テイスト: <input formControlName="taste"></label>
+  </div>
+  <div>
+    <span *ngFor="let select of hotcoldsel">
+      <input type="radio" formControlName="hotcold" [value]="select">
+      {{select}}
+    </span>
+  </div>
+</form>
+<p>フォーム入力値: {{coffeeForm.value | json }}</p>

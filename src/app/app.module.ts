@@ -5,11 +5,13 @@ import { FormsModule, FormGroup, FormControl, ReactiveFormsModule } from '@angul
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ControlsComponent } from './controls/controls.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    ControlsComponent
   ],
   imports: [
     BrowserModule,
