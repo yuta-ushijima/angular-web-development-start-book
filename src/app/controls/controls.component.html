@@ -6,16 +6,23 @@
     <label>テイスト: <input formControlName="taste"></label>
   </div>
   <div>
-    <span *ngFor="let select of hotcoldsel">
-      <input type="radio" formControlName="hotcold" [value]="select">
+    <span *ngFor="let select of hotColdSel">
+      <input type="radio" formControlName="hotCold" [value]="select">
       {{select}}
     </span>
   </div>
   <div>
-    <span *ngFor="let item of addsel">
+    <span *ngFor="let item of addSel">
       <input type="checkbox" (change)="onCheckChanged(item, $event.target.checked)">
       {{item}}
     </span>
+  </div>
+  <div>
+    <label>おつまみ:
+      <select formControlName="nut">
+        <option *ngFor="let nut of nutSel" [value]="nut">{{nut}}</option>
+      </select>
+    </label>
   </div>
 </form>
 <p>フォーム入力値: {{coffeeForm.value | json }}</p>
